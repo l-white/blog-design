@@ -1,0 +1,24 @@
+main {
+  
+    background-color: wheat;
+
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    border: 2px solid #00004d;
+
+    @media screen and (max-width:780px) {
+        border: 1px solid #00004d;
+    }
+}
+
+figcaption {
+    font-size: 0.9em;
+    text-align: center;
+    font-style: italic;
+}
