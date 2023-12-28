@@ -1,0 +1,163 @@
+body {
+    background-color: #00004d;
+    color: #00004d;
+    font-family: Georgia, serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+   
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: 4fr 8fr;
+        grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+}
+
+header, aside, main, footer {
+    padding: 1em;
+}
+
+header {
+    grid-area: header;
+    background-color: #c9e4de;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+
+  aside {
+    grid-area: sidebar;
+    background-color: #fffff2;
+    min-width: 200px;
+  }
+
+  main {
+    grid-area: main;
+    background-color: wheat;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "h1 h1 h1"
+        "post1 post2 post3"
+        "post4 post5 post6"
+        "post7 post8 post9"
+        "button button button";
+    gap: 20px;
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "h1 h1"
+            "post1 post2"
+            "post3 post4"
+            "post5 post6"
+            "post7 post8"
+            "post9 post9"
+            "button button";
+    }
+
+    @media screen and (max-width: 950px) {
+        grid-template-columns: 1fr;              
+        grid-template-areas:
+            "h1"
+            "post1"
+            "post2"
+            "post3" 
+            "post4"
+            "post5" 
+            "post6"
+            "post7"
+            "post8"
+            "post9"
+            "button";
+    }
+  }
+
+  h1 {
+    grid-area: h1;
+    text-align: center;
+  
+  }
+
+  .blog-card {
+    background-color: #fffff2;
+    min-width: 300px;
+    padding: 1em;
+    border-radius: 5px;
+
+    @media screen and (max-width: 500px) {
+        min-width: 250px;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 375px) {
+        min-width: 225px;
+    }
+  }
+
+  .read-more {
+    margin: 0 auto;
+    grid-area: button;
+ 
+  }
+
+  button {
+    padding: 1em;
+    font-family: Georgia, serif;
+    background-color: #fffff2;
+    border-radius: 5px;
+    border: 2px solid #00004d;
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: wheat;
+    background-color: #c9e4de;
+  }
+
+  p, li {
+    font-family: Andale Mono, monospace;
+  }
+
+  a {
+    color:#e30b21;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: #00004d;
+    border-bottom: 1.5px solid #00004d;
+  }
+
+  .date {
+    font-size: 0.8em;
+  }
+
+  figure {
+    margin: 0 -16px;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
