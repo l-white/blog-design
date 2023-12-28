@@ -61,6 +61,15 @@ aside {
     min-width: 200px;
 }
 
+aside ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+aside ul li {
+    margin-top: 10px;
+}
+
 aside button {
     width: 100px;
     margin-top: 5px;
